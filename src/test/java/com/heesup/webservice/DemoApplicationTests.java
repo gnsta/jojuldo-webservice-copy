@@ -1,4 +1,4 @@
-package com.heesup.demo;
+package com.heesup.webservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
