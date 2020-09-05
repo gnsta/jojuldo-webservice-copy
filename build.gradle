@@ -7,10 +7,11 @@ buildscript{
 }
 
 plugins {
-    id 'org.springframework.boot' version '2.3.3.RELEASE'
+    id 'org.springframework.boot' version '1.5.9.RELEASE'
     id 'io.spring.dependency-management' version '1.0.10.RELEASE'
     id 'java'
 }
+
 
 group = 'com.heesup'
 version = '0.0.1-SNAPSHOT'
@@ -46,5 +47,9 @@ dependencies {
 
     //junit수행할때 추가(junit4 추가하고)
     testCompile('org.springframework.boot:spring-boot-starter-test')
+
+    //handlebar 서버 템플릿 엔진을 사용하기 위한 의존성
+    //플러그인 지원 가능
+    compile 'pl.allegro.tech.boot:handlebars-spring-boot-starter:0.2.15'
 
 }
