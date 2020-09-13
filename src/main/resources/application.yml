@@ -1,28 +1,40 @@
+#spring:
+#  profiles:
+#    active: local # 기본 환경 선택
+#
+##위의 것은 공통영역 아래것은 profile영역
+##profile영역에 없는 것은 공통영역에 있는 설정이 적용되고
+##같은 설정이 있으면 profile영역에 있는 설정이 적용이 된다.
+##따라서 공통 영역의 설정을 할 떄 많은 주의가 필요
+#---
+#spring:
+#  profiles: local
+#
+#  h2:
+#    console:
+#      enabled: true
+#
+## 추가적으로 h2속성을 지정해 줌
+#  datasource:
+#    data: classpath:data-h2.sql # 시작할때 실행시킬 script
+#    driver-class-name: org.h2.Driver  #h2 드라이버 설정
+#    url: jdbc:h2:mem:testdb  #접속 URL
+#    username: sa  # 사용자 이름 (로그인 시 사용)
+#    password:   # 사용자 암호 (로그인 시 사용)
+#
+#  jpa:
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: create-drop
+
+# Test
 spring:
   profiles:
     active: local # 기본 환경 선택
 
-#위의 것은 공통영역 아래것은 profile영역
-#profile영역에 없는 것은 공통영역에 있는 설정이 적용되고
-#같은 설정이 있으면 profile영역에 있는 설정이 적용이 된다.
-#따라서 공통 영역의 설정을 할 떄 많은 주의가 필요
+# local 환경
 ---
 spring:
   profiles: local
-
-  h2:
-    console:
-      enabled: true
-
-# 추가적으로 h2속성을 지정해 줌
-  datasource:
-    data: classpath:data-h2.sql # 시작할때 실행시킬 script
-    driver-class-name: org.h2.Driver  #h2 드라이버 설정
-    url: jdbc:h2:mem:testdb  #접속 URL
-    username: sa  # 사용자 이름 (로그인 시 사용)
-    password:   # 사용자 암호 (로그인 시 사용)
-
   jpa:
     show-sql: true
-    hibernate:
-      ddl-auto: create-drop
